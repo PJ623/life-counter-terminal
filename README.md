@@ -8,7 +8,7 @@ This web app can be used for other games as well!
 
 Enter either 'sh' or 'show' to display the current life total as well as any special life totals (such as infect or commander damage).
 
-Command Regex: /sh|show/
+Command regex: /sh|show/
 
 
 ## Modifying the life total
@@ -16,7 +16,7 @@ Command Regex: /sh|show/
 Simply enter an operator and an operand into the terminal to modify the life total.
 Using the appropriate operator, you may add to, subtract from, multiply, divide, or set, the life total.
 
-Command Regex: /[+-*/=]\d+/
+Command regex: /[+-*/=]\d+/
 
 For example, entering '-2' would deduct two life points from the current life total.
 
@@ -27,7 +27,7 @@ Simply type 'undo' into the terminal to fix life total related mistakes.
 
 Note that the command 'undo' only reverts life total and not special totals like *infect*.
 
-Command Regex: /undo/
+Command regex: /undo/
 
 ## Rolling a die
 
@@ -35,7 +35,7 @@ Enter 'roll [the die's number of sides]' to roll a die of variable size.
 
 The command 'roll 20' would roll a 20-sided die.
 
-Command Regex: /roll \d+/
+Command regex: /roll \d+/
 
 
 ## Counting infect
@@ -54,14 +54,14 @@ You can keep track of how much commander damage you take, and how much you deal.
 
 The command 'cmd to Bucky +2' would increase player Bucky's commander damage total by 2 points.
 
-Command Regex: /(cmd|command) (to|from) \S+ [+-*/=]\d+/
+Command regex: /(cmd|command) (to|from) \S+ [+-*/=]\d+/
 
 
 ## Getting ready for the next game
 
 Entering 'reset' into the terminal resets the game.
 
-Command Regex: /reset/
+Command regex: /reset/
 
 
 ## Customizing the terminal
@@ -71,7 +71,7 @@ Only certain colors are supported at the moment.
 
 Supported colors: red, blue, yellow, white, pink, yellow, green, orange, teal
 
-Command Regex: /color \w+/
+Command regex: /color \w+/
 
 
 ## Deleting uneeded infect or commander damage totals
@@ -80,7 +80,7 @@ Enter '(del or delete) [property name]' to delete a special life count.
 
 The command 'del infect' would delete the infect property and total.
 
-Command Regex: /del|delete \S+/
+Command regex: /del|delete \S+/
 
 
 ## Getting some encouragement
@@ -89,4 +89,4 @@ Simply enter 'cheer' into the terminal to get some encouragement!
 
 Do this if you're in a tight spot, and you're a *Love Live!* fan.
 
-Command Regex: /cheer/
+Command regex: /cheer/
