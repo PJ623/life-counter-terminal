@@ -4,9 +4,11 @@ A simple terminal-style life counter for Magic: The Gathering.
 This web app can be used for other games as well!
 
 # Commands
-## Showing the life total: /sh|show/
+## Showing the life total
 
-Enter either 'sh' or 'show' to display the current life total.
+Enter either 'sh' or 'show' to display the current life total as well as any special life totals (such as infect or commander damage).
+
+Command Regex: /sh|show/
 
 
 ## Modifying the life total
