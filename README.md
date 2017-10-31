@@ -1,11 +1,13 @@
 # life-counter-terminal
 A simple terminal-style life counter for Magic: The Gathering.
+
 This web app can be used for other games as well!
 
 # Commands
 ## Showing the life total: /sh|show/
 
 Enter either 'sh' or 'show' to display the current life total.
+
 
 ## Modifying the life total
 
@@ -15,6 +17,7 @@ Using the appropriate operator, you may add to, subtract from, multiply, divide,
 Command Regex: /[+-*/=]\d+/
 
 For example, entering '-2' would deduct two life points from the current life total.
+
 
 ## Fixing life-counting mistakes
 
@@ -32,6 +35,7 @@ The command 'roll 20' would roll a 20-sided die.
 
 Command Regex: /roll \d+/
 
+
 ## Counting infect
 
 Simply enter '(inf or infect) [operator][operand]' into the terminal to count infect.
@@ -39,6 +43,7 @@ Simply enter '(inf or infect) [operator][operand]' into the terminal to count in
 For example, the command 'infect =1' would set the infect total to 1.
 
 Command regex: /(inf|infect) [+-*/=]\d+/
+
 
 ## Counting commander damage
 
@@ -49,11 +54,13 @@ The command 'cmd to Bucky +2' would increase player Bucky's commander damage tot
 
 Command Regex: /(cmd|command) (to|from) \S+ [+-*/=]\d+/
 
+
 ## Getting ready for the next game
 
 Entering 'reset' into the terminal resets the game.
 
 Command Regex: /reset/
+
 
 ## Customizing the terminal
 
@@ -64,6 +71,7 @@ Supported colors: red, blue, yellow, white, pink, yellow, green, orange, teal
 
 Command Regex: /color \w+/
 
+
 ## Deleting uneeded infect or commander damage totals
 
 Enter '(del or delete) [property name]' to delete a special life count.
@@ -71,6 +79,7 @@ Enter '(del or delete) [property name]' to delete a special life count.
 The command 'del infect' would delete the infect property and total.
 
 Command Regex: /del|delete \S+/
+
 
 ## Getting some encouragement
 
