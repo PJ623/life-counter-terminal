@@ -123,7 +123,6 @@ function LifeCounter(){
         history.appendChild(divider);
     }
     
-    // Only affects life. Expand to affect custom life counts?
     let undo = function(){
         if(undoArr.length == 0)
             player.life = initialLife;
@@ -161,12 +160,12 @@ function LifeCounter(){
     }
 
     displayStatus();
+
+    // add in secret waifu background function?
+    // add in cheer select?
+    // make start(initial life total)
+    // expand undo() to affect custom life counts?
 }
 
-
-// secret waifu background
-
 //START		
-//displayStatus();
-
 myLifeTotal = new LifeCounter();
