@@ -50,5 +50,6 @@ hr {
     border-color: inherit;
     border-style: solid;
     border-width: 2px;
+	color: inherit;
     margin-bottom: 1em;
 }
