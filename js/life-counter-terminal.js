@@ -1,7 +1,8 @@
-function LifeCounter(){
-    const initialLife = 40;
-    let commandLine = document.getElementById('command-line');
-    let history = document.getElementById('history');
+let commandLine = document.getElementById('command-line');
+let history = document.getElementById('history');
+
+function LifeCounter(initialLife){
+    //const initialLife = 40;
     
     let undoArr = [];
     
@@ -18,7 +19,7 @@ function LifeCounter(){
         let command = commandLine.value;
         displayCommand(command);
         
-        if(command.match(/^[\-\+\*\/\=]\d+$/)){
+        if(command.match(/^[-+*/=]\d+$/)){
             undoArr.push(player.life);
             modifyLife('life', command);
             displayStatus();
@@ -34,10 +35,10 @@ function LifeCounter(){
             cheer();
         }else if(command.match(/^color\s+\w+$/i)){
             changeColor(command);
-        }else if(command.match(/^(inf|infect)\s+[\-\+\*\/\=]\d+$/i)){
+        }else if(command.match(/^(inf|infect)\s+[-+*/=]\d+$/i)){
             modifyLife('infect', command);
             displayStatus();
-        }else if(command.match(/^(cmd|command)\s+(to|from)\s+\S+\s+[\-\+\*\/\=]\d+$/i)){
+        }else if(command.match(/^(cmd|command)\s+(to|from)\s+\S+\s+[-+*/=]\d+$/i)){
             let customLife = command.match(/^(cmd|command)\s+(to|from)\s+(\S+)/i);
             customLife = customLife[3] + '(' + customLife[2] + '/cmd)';
             modifyLife(customLife, command);
@@ -48,6 +49,7 @@ function LifeCounter(){
             displayStatus();
         }else if(command.match(/^(delete|del)\s+\S+$/)){
             deleteProperty(command);
+            displayStatus();
         }else{
             let invalidCommandMessage = "Command \'" + command + "\' is invalid.";
             displayCommand(invalidCommandMessage);
@@ -87,7 +89,7 @@ function LifeCounter(){
     }
     
     let modifyLife = function(type, command){
-        let operator = command.match(/[\-\+\*\/\=]/)[0];
+        let operator = command.match(/[-+*/=]/)[0];
         let operand = Number(command.match(/\d+$/)[0]);
         
         if(!player.hasOwnProperty(type))
@@ -168,4 +170,4 @@ function LifeCounter(){
 }
 
 //START		
-myLifeTotal = new LifeCounter();
+myLifeTotal = new LifeCounter(20);

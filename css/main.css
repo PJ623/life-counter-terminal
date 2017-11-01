@@ -5,7 +5,7 @@ html, body{
 body{
     background-color: black;
     margin: 0px;
-    font-family: 'Lucida Console';	
+    font-family: 'Lucida Console', monospace;	
     -webkit-text-size-adjust: none;
 }
 
