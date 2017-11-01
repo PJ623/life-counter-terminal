@@ -6,7 +6,7 @@ body{
     background-color: black;
     margin: 0px;
     font-family: 'Lucida Console';	
-    -webkit-text-size-adjust:none;
+    -webkit-text-size-adjust: none;
 }
 
 #container{
@@ -34,10 +34,13 @@ body{
     border-style: none;
 }
 
+.container__command-controls{
+    padding: 0em 0.5em 0em 0.5em;
+    width: inherit;
+}
 .container__command-controls > span{
-    padding: 0.25em 0em 0.25em 0em;
-    text-align: center;
-    width: 5%;
+    padding: 0.25em 0.5em 0.25em 0em;
+    max-width: 5%;
     display: inline-block;
 }
 
