@@ -37,7 +37,7 @@ function LifeCounter(initialLife) {
     }
 
     let submit = function () {
-        let command = commandLine.value;
+        let command = commandLine.value.trim();
         displayCommand(command);
 
         if (command.match(/^[-+*/=]\d+$/)) {
