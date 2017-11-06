@@ -31,7 +31,7 @@ body {
 }
 
 .history {
-    max-height: 96%; /* do alternate resizing with js later */
+    max-height: 95%; /* do alternate resizing with js later */
     border-style: none;			
     overflow: auto;
     border-color: inherit;
