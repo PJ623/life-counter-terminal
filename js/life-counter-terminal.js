@@ -93,6 +93,7 @@ function LifeCounter(initialLife) {
             displayCommand(invalidCommandMessage);
         }
 
+        //container.scrollTop = container.scrollHeight;
         history.scrollTop = history.scrollHeight;
     }
 
