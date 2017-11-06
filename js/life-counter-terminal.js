@@ -1,17 +1,14 @@
 function LifeCounter(initialLife) {
 
-    let commandControls = document.createElement('DIV');
+    let commandControls = document.createElement('SPAN');
     commandControls.className = 'command-controls';
-
-    let styleSpan = document.createElement('SPAN');
-    styleSpan.innerHTML = '>';
+    commandControls.innerHTML = '> ';
 
     let commandLine = document.createElement('INPUT');
     commandLine.type = 'text';
     commandLine.className = 'command-line';
     commandLine.placeholder = 'Tap here to issue a command.';
 
-    commandControls.appendChild(styleSpan);
     commandControls.appendChild(commandLine);
 
     let history = document.createElement('DIV');

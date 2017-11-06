@@ -17,21 +17,24 @@ body {
     width: 100%;
     padding: 0.5em;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     /*border-radius: 4px;*/
     /*box-shadow: 2px 2px 2px rgba(0,0,0,0.5);*/
 }
 
 .command-line {
-    width: 90%;
+    width: 95%;
     background-color: inherit;
     border-style: none;
     color: inherit;
     font-size: inherit;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 .history {
-    max-height: 90%; /* do alternate resizing with js later */
+    max-height: 95%; /* do alternate resizing with js later */
     border-style: none;			
     overflow: auto;
     border-color: inherit;
@@ -39,12 +42,10 @@ body {
 }
 
 .command-controls {
-    width: inherit;
-    padding-top: 0.5em;
-}
-.command-controls > span {
-    padding: 0em 0.5em 0em 0em;
-    display: inline-block;
+    background-color: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
 }
 
 .history > div {
