@@ -56,19 +56,21 @@ function LifeCounter(initialLife) {
             cheer();
         } else if (command.match(/^color\s+\w+$/i)) {
             changeColor(command);
-        } else if (command.match(/^(inf|infect)\s+[-+*/=]\d+$/i)) {
-            modifyLife('infect', command);
-            displayStatus();
-        } else if (command.match(/^(cmd|command)\s+(to|from|fr)\s+\S+\s+[-+*/=]\d+$/i)) {
-            let customLife = command.match(/^(cmd|command)\s+(to|from|fr)\s+(\S+)/i);
-            console.log(customLife[2]);
-            
-            if(customLife[1] == 'command')
-                customLife[1] = 'cmd';
+        } else if (command.match(/^(cmd|command|inf|infect)\s+(to|from|fr)\s+\S+\s+[-+*/=]\d+$/i)) {
+            let customLife = command.match(/^(cmd|command|inf|infect)\s+(to|from|fr)\s+(\S+)/i);
 
-            if(customLife[2] == 'from')
+            switch (customLife[1]) {
+                case 'infect':
+                    customLife[1] = 'inf';
+                    break;
+                case 'command':
+                    customLife[1] = 'cmd';
+                    break;
+            }
+
+            if (customLife[2] == 'from')
                 customLife[2] = 'fr';
-            
+
             customLife = customLife[3] + '(' + customLife[1] + '-' + customLife[2] + ')';
             modifyLife(customLife, command);
             displayStatus();
@@ -87,6 +89,7 @@ function LifeCounter(initialLife) {
             let invalidCommandMessage = "Command \'" + command + "\' is invalid.";
             displayCommand(invalidCommandMessage);
         }
+
         history.scrollTop = history.scrollHeight;
     }
 

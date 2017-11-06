@@ -51,19 +51,9 @@ The command **'roll 20'** would roll a 20-sided die.
 **Command regex:** /roll \d+/
 
 
-## Counting infect
+## Counting commander damage and infect
 
-Simply enter **'(inf or infect) [operator][operand]'** into the terminal to track or modify the infect total.
-
-For example, the command **'infect =1'** would set the infect total to 1.
-
-**Command regex:** /(inf|infect) [+-*/=]\d+/
-
-
-## Counting commander damage
-
-Enter **'(cmd or command) (to or from) [player name] [operator][operand]'** in the terminal to track or modify commander damage.
-You can keep track of how much commander damage you take, and how much you deal.
+Enter **'(cmd or command or inf or infect) (to or fr or from) [player name] [operator][operand]'** in the terminal to track or modify commander damage or infect counters.
 
 The command **'cmd fr Bucky +2'** would increase the commander damage total that Bucky has dealt to you by 2 points.
 
