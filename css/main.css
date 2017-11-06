@@ -11,7 +11,7 @@ body {
     color: teal;
     display: inline-block; /*maybe go for block instead*/
     width: 100%;
-    padding: 1em;
+    padding: 0.5em;
     box-sizing: border-box;
 }
 

@@ -16,13 +16,15 @@ function LifeCounter(initialLife) {
 
     let history = document.createElement('DIV');
     history.className = 'history';
-    history.style.maxHeight = (window.innerHeight * .80) + 'px';
+    history.style.height = (window.innerHeight * .90) + 'px'; // TODO: Change to clientHeight
 
     let container = document.createElement('DIV');
     container.className = 'life-counter-container';
-
+    
     container.appendChild(history);
     container.appendChild(commandControls);
+
+    //history.style.maxHeight = (container.clientHeight) + 'px';
 
     //document.body.appendChild(container);
 
