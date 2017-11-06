@@ -1,3 +1,7 @@
+html, body{
+    height: 95%;
+}
+
 body {
     background-color: black;
     font-family: 'Lucida Console';	
@@ -25,6 +29,7 @@ body {
 }
 
 .history {
+    max-height: 90%; /* do alternate resizing with js later */
     border-style: none;			
     overflow: auto;
     border-color: inherit;

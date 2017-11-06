@@ -16,7 +16,7 @@ function LifeCounter(initialLife) {
 
     let history = document.createElement('DIV');
     history.className = 'history';
-    history.style.height = (window.innerHeight * .85) + 'px'; // TODO: Change to clientHeight
+    //history.style.height = (window.innerHeight * .85) + 'px'; // TODO: Change to clientHeight
 
     let container = document.createElement('DIV');
     container.className = 'life-counter-container';
