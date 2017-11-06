@@ -209,4 +209,4 @@ function LifeCounter(initialLife) {
 //START		
 //let myLifeTotal = new LifeCounter(20);
 document.body.appendChild(new LifeCounter(20));
-/*let myOtherLifeTotal = new LifeCounter(30);
+//let myOtherLifeTotal = new LifeCounter(30);
