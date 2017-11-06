@@ -198,11 +198,10 @@ function LifeCounter(initialLife) {
     }
 
     displayStatus();
-
+    commandLine.focus();
     // add in secret waifu background function?
     // add in cheer select?
     // change background color
-    // make start(initial life total)
     // expand undo() to affect custom life counts?
 }
 
