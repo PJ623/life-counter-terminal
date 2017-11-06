@@ -49,7 +49,7 @@ function LifeCounter(initialLife) {
         } else if (command.match(/^reset$/i)) {
             reset();
             displayStatus();
-        } else if (command.match(/^undo$/i)) {
+        } else if (command.match(/^(un|undo)$/i)) {
             undo();
             displayStatus();
         } else if (command.match(/^cheer$/i)) {
@@ -59,9 +59,17 @@ function LifeCounter(initialLife) {
         } else if (command.match(/^(inf|infect)\s+[-+*/=]\d+$/i)) {
             modifyLife('infect', command);
             displayStatus();
-        } else if (command.match(/^(cmd|command)\s+(to|from)\s+\S+\s+[-+*/=]\d+$/i)) {
-            let customLife = command.match(/^(cmd|command)\s+(to|from)\s+(\S+)/i);
-            customLife = customLife[3] + '(' + customLife[2] + '/cmd)';
+        } else if (command.match(/^(cmd|command)\s+(to|from|fr)\s+\S+\s+[-+*/=]\d+$/i)) {
+            let customLife = command.match(/^(cmd|command)\s+(to|from|fr)\s+(\S+)/i);
+            console.log(customLife[2]);
+            
+            if(customLife[1] == 'command')
+                customLife[1] = 'cmd';
+
+            if(customLife[2] == 'from')
+                customLife[2] = 'fr';
+            
+            customLife = customLife[3] + '(' + customLife[1] + '-' + customLife[2] + ')';
             modifyLife(customLife, command);
             displayStatus();
         } else if (command.match(/^roll\s+\d+$/i)) {
@@ -71,7 +79,7 @@ function LifeCounter(initialLife) {
         } else if (command.match(/^(delete|del)\s+\S+$/)) {
             deleteProperty(command);
             displayStatus();
-        } else if (command.match(/^start\s+\d+$/i)){
+        } else if (command.match(/^start\s+\d+$/i)) {
             initialLife = Number(command.match(/\d+/)[0]);
             reset();
             displayStatus();
@@ -80,7 +88,6 @@ function LifeCounter(initialLife) {
             displayCommand(invalidCommandMessage);
         }
         history.scrollTop = history.scrollHeight;
-        container.scrollTop = container.scrollHeight;
     }
 
     let deleteProperty = function (command) {
@@ -170,7 +177,7 @@ function LifeCounter(initialLife) {
 
     let changeColor = function (command) {
         tried = command.match(/^color\s+(\w+)$/i)[1];
-        color = command.match(/red|blue|yellow|white|pink|yellow|green|orange|teal/);
+        color = tried.match(/red|blue|yellow|white|pink|yellow|green|orange|teal/);
 
         if (color != null) {
             color = color[0];
