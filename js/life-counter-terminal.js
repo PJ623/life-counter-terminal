@@ -1,7 +1,7 @@
 function LifeCounter(initialLife) {
 
     let commandControls = document.createElement('DIV');
-    commandControls.className = 'container__command-controls';
+    commandControls.className = 'command-controls';
 
     let styleSpan = document.createElement('SPAN');
     styleSpan.innerHTML = '>';
@@ -18,7 +18,7 @@ function LifeCounter(initialLife) {
     history.className = 'history';
 
     let container = document.createElement('DIV');
-    container.className = 'container';
+    container.className = 'life-counter-container';
 
     container.appendChild(history);
     container.appendChild(commandControls);
