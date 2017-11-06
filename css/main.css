@@ -9,13 +9,14 @@ body{
     -webkit-text-size-adjust: none;
 }
 
-#container{
-    height: 100%;
+.container{
+    max-height: 100%;
+    overflow: auto;
     color: teal;
     font-size: 1em;
 }
 
-#command-line{
+.command-line{
     width: 90%;
     background-color: inherit;
     border-style: none;
@@ -25,7 +26,7 @@ body{
     font-family: inherit;
 }
 
-#history{
+.history{
     max-height: 90%;
     border-style: none;			
     padding: 0.5em;
@@ -44,7 +45,7 @@ body{
     display: inline-block;
 }
 
-#history > div {
+.history > div {
     margin-bottom: 1em;
     display: block;
 }

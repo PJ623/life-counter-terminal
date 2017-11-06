@@ -1,9 +1,30 @@
-let commandLine = document.getElementById('command-line');
-let history = document.getElementById('history');
-
 function LifeCounter(initialLife){
-    //const initialLife = 40;
+
+    let commandControls = document.createElement('DIV');
+    commandControls.className = 'container__command-controls';
+
+    let styleSpan = document.createElement('SPAN');
+    styleSpan.innerHTML = '>';
+
+    let commandLine = document.createElement('INPUT');
+    commandLine.type = 'text';
+    commandLine.className = 'command-line';
+    commandLine.placeholder = 'Tap here to issue a command.';
+
+    commandControls.appendChild(styleSpan);
+    commandControls.appendChild(commandLine);
+
+    let history = document.createElement('DIV');
+    history.className = 'history';
+
+    let container = document.createElement('DIV');
+    container.className = 'container';
+
+    container.appendChild(history);
+    container.appendChild(commandControls);
     
+    document.body.appendChild(container);
+
     let undoArr = [];
     
     let player = {
@@ -55,6 +76,7 @@ function LifeCounter(initialLife){
             displayCommand(invalidCommandMessage);
         }
         history.scrollTop = history.scrollHeight;
+        container.scrollTop = container.scrollHeight;
     }
     
     let deleteProperty = function(command){
@@ -148,7 +170,7 @@ function LifeCounter(initialLife){
     
         if(color != null){
             color = color[0];
-            document.getElementById('container').style.color = color;
+            container.style.color = color;
         } else {
             displayCommand("Color \'" + tried + "\' is not available.");
         }
@@ -171,3 +193,4 @@ function LifeCounter(initialLife){
 
 //START		
 myLifeTotal = new LifeCounter(20);
+//myLifeTotal = new LifeCounter(30);
