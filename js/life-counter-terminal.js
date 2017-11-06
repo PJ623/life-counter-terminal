@@ -16,6 +16,7 @@ function LifeCounter(initialLife) {
 
     let history = document.createElement('DIV');
     history.className = 'history';
+    history.style.maxHeight = (window.innerHeight * .90) + 'px';
 
     let container = document.createElement('DIV');
     container.className = 'life-counter-container';
@@ -198,9 +199,11 @@ function LifeCounter(initialLife) {
     }
 
     displayStatus();
-    commandLine.focus();
+    //commandLine.focus();
     // add in secret waifu background function?
     // add in cheer select?
+    //console.log(window.innerHeight);
+    //console.log(window.outerHeight);
     // change background color
     // expand undo() to affect custom life counts?
     return container;

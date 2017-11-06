@@ -25,7 +25,6 @@ body {
 }
 
 .history {
-    max-height: 720px;
     border-style: none;			
     overflow: auto;
     border-color: inherit;
