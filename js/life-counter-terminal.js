@@ -23,7 +23,7 @@ function LifeCounter(initialLife) {
     container.appendChild(history);
     container.appendChild(commandControls);
 
-    document.body.appendChild(container);
+    //document.body.appendChild(container);
 
     let undoArr = [];
 
@@ -203,8 +203,10 @@ function LifeCounter(initialLife) {
     // add in cheer select?
     // change background color
     // expand undo() to affect custom life counts?
+    return container;
 }
 
 //START		
-myLifeTotal = new LifeCounter(20);
-//myLifeTotal = new LifeCounter(30);
+//let myLifeTotal = new LifeCounter(20);
+document.body.appendChild(new LifeCounter(20));
+/*let myOtherLifeTotal = new LifeCounter(30);
