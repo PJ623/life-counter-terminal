@@ -13,11 +13,11 @@ body {
     overflow: auto;
     color: teal;
     display: inline-block;
-    width: 97%;
+    width: 100%;
 }
 
 .command-line {
-    width: 96%;
+    width: 95%;
     background-color: inherit;
     border-style: none;
     color: inherit;
@@ -37,7 +37,7 @@ body {
     width: inherit;
 }
 .container__command-controls > span {
-    padding: 0.25em 0.5em 0em 0em;
+    padding: 0em 0.5em 0em 0em;
     max-width: 5%;
     display: inline-block;
 }
